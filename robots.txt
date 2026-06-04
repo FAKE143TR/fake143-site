@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fake143.xyz/sitemap.xml

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capabilities — FAKEAI</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦅</text></svg>">
+</head>
+<body>
+
+  <button class="hamburger" onclick="toggleSidebar()" aria-label="Menu">☰</button>
+  <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <div class="logo">F</div>
+      <div class="brand-text">
+        <h1>FAKEAI</h1>
+        <div class="version">v4.3 · fakeai</div>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Documentation</div>
+      <a href="/fakeai/"><span class="icon">◈</span>Overview</a>
+            <a href="/fakeai/soul"><span class="icon">◉</span>Soul</a>
+            <a href="/fakeai/capabilities" class="active"><span class="icon">▣</span>Capabilities</a>
+            <a href="/fakeai/tech"><span class="icon">⬡</span>Tech Stack</a>
+      <div class="nav-section" style="margin-top:16px">Live</div>
+      <a href="https://pearl.fake143.xyz" target="_blank"><span class="icon">📊</span>Pearl Calculator</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://fake143.xyz">fake143.xyz</a> · Founded by FAKE143
+    </div>
+  </aside>
+
+  <main class="main">
+    <header>
+      <h2>Capabilities</h2>
+      <p>Full spectrum of FAKEAI's operational capabilities across blockchain networks, DeFi protocols, and on-chain intelligence.</p>
+    </header>
+
+    <section>
+      <h3>Crypto Operations</h3>
+      <p>Core blockchain interaction capabilities spanning multiple networks and asset types.</p>
+      <div class="cap-group">
+        <h4><span class="cap-icon pink" style="background:var(--pink-dim);color:var(--pink);">⛓</span> Token Operations</h4>
+        <ul>
+          <li>Native token transfers across EVM chains, Solana, Cosmos, and more</li>
+          <li>ERC-20 / SPL token transfers with gas optimization</li>
+          <li>Token approval management (approve, revoke, set allowance)</li>
+          <li>Multi-token batch transfers in single transactions</li>
+          <li>Balance checking and portfolio aggregation across chains</li>
+        </ul>
+      </div>
+      <div class="cap-group">
+        <h4><span class="cap-icon purple" style="background:var(--purple-dim);color:var(--purple);">💱</span> Token Swaps</h4>
+        <ul>
+          <li>DEX swaps via Uniswap, Jupiter, Osmosis, and other major DEXs</li>
+          <li>Slippage protection and optimal route finding</li>
+          <li>MEV-aware transaction submission</li>
+          <li>Limit order execution where supported</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Monitoring &amp; Alerts</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon purple" style="background:var(--purple-dim);color:var(--purple);">📡</span> Real-Time Monitoring</h4>
+        <ul>
+          <li>Multi-chain balance monitoring with configurable thresholds</li>
+          <li>Transaction tracking and confirmation monitoring</li>
+          <li>Gas price tracking and optimal gas estimation</li>
+          <li>Smart contract event monitoring and log parsing</li>
+          <li>Wallet activity surveillance across supported networks</li>
+        </ul>
+      </div>
+      <div class="cap-group">
+        <h4><span class="cap-icon pink" style="background:var(--pink-dim);color:var(--pink);">🔔</span> Alert System</h4>
+        <ul>
+          <li>Custom alert conditions (balance changes, large transfers, contract events)</li>
+          <li>Multi-channel notification delivery</li>
+          <li>Price movement and whale tracking alerts</li>
+          <li>Protocol health monitoring (TVL changes, governance proposals)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>NFT Operations</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon purple" style="background:var(--purple-dim);color:var(--purple);">🖼</span> NFT Management</h4>
+        <ul>
+          <li>NFT minting from contract interfaces</li>
+          <li>Transfer and batch transfer of NFTs</li>
+          <li>Marketplace listing and delisting (OpenSea, Blur, Magic Eden)</li>
+          <li>Collection metadata and floor price tracking</li>
+          <li>ERC-721 and ERC-1155 standard support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>DeFi Integration</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon pink" style="background:var(--pink-dim);color:var(--pink);">🏦</span> DeFi Protocols</h4>
+        <ul>
+          <li>Lending/borrowing: Aave, Compound, and similar protocols</li>
+          <li>Liquidity provision and LP token management</li>
+          <li>Yield farming strategy execution</li>
+          <li>Staking operations (native staking, liquid staking)</li>
+          <li>Position monitoring and health factor tracking</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Cross-Chain Operations</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon purple" style="background:var(--purple-dim);color:var(--purple);">🌉</span> Bridge &amp; Multi-Chain</h4>
+        <ul>
+          <li>Cross-chain bridge transactions via major bridge protocols</li>
+          <li>Multi-chain portfolio management from unified interface</li>
+          <li>Chain-specific gas management and refueling</li>
+          <li>Cross-chain message passing and verification</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Airdrop &amp; Ecosystem Interaction</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon pink" style="background:var(--pink-dim);color:var(--pink);">🪂</span> Airdrop Operations</h4>
+        <ul>
+          <li>Systematic protocol interaction for airdrop qualification</li>
+          <li>Eligibility checking and claim execution</li>
+          <li>Testnet faucet collection and testnet activity</li>
+          <li>Protocol governance participation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Security &amp; Audit</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon purple" style="background:var(--purple-dim);color:var(--purple);">🛡</span> Security Operations</h4>
+        <ul>
+          <li>Smart contract risk assessment before interaction</li>
+          <li>Approval auditing and unnecessary permission revocation</li>
+          <li>Phishing and scam contract detection</li>
+          <li>Transaction simulation before execution</li>
+          <li>Token legitimacy verification (honeypot detection, rug indicators)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Batch Operations</h3>
+      <div class="cap-group">
+        <h4><span class="cap-icon pink" style="background:var(--pink-dim);color:var(--pink);">📦</span> Batch Processing</h4>
+        <ul>
+          <li>Multi-transaction batch execution with sequential or parallel processing</li>
+          <li>CSV-driven bulk operations (airdrops, transfers, claims)</li>
+          <li>Retry logic with exponential backoff for failed transactions</li>
+          <li>Transaction queue management and prioritization</li>
+          <li>Cost optimization through batching and gas strategies</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h3>Ecosystem Projects</h3>
+      <div class="cards">
+        <div class="card fade-up">
+          <div class="card-icon pink">🎮</div>
+          <h3>Jay Network Games</h3>
+          <p>Building on-chain gaming experiences through Jay Network. Interactive games powered by smart contracts and decentralized logic.</p>
+        </div>
+        <div class="card fade-up">
+          <div class="card-icon purple">⛏</div>
+          <h3>Validator Infrastructure</h3>
+          <p>Operating validator nodes to secure proof-of-stake networks. Contributing to network decentralization and earning staking rewards.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

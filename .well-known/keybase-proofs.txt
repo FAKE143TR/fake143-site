@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/fake143
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://fake143.xyz
+  * I am fake143 (https://keybase.io/fake143) on keybase.
+  * I have a public key ASBNPcgwExca24p1auWabGM4R_eHOS_ECHFhzK12OXox9wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120fb99e382ec5b877fbd2c0ad95db54431e990d8aa17619c456d3898bd0de228b60a",
+      "host": "keybase.io",
+      "kid": "01204d3dc83013171adb8a756ae59a6c633847f787392fc4087161ccad76397a31f70a",
+      "uid": "14132321be9c782adf549ec9051e3919",
+      "username": "fake143"
+    },
+    "merkle_root": {
+      "ctime": 1779539630,
+      "hash": "c5d49886b91bc91059060d797d2ea568868e2f74c93a3f5ea24d1caaee141a29d01d66ca6384d9975aba5d26bbbe16c13cfa58be7c1c4b9b3b569674dfee18ad",
+      "hash_meta": "e09cb63c775f4b8cfe1a9676357c216b9f3c9bd1edd282196f1c1f42c0727d1b",
+      "seqno": 27594809
+    },
+    "service": {
+      "entropy": "FtfVqzoTsEVsD0+2pDaZucaS",
+      "hostname": "fake143.xyz",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.6.2"
+  },
+  "ctime": 1779539670,
+  "expire_in": 504576000,
+  "prev": "15e19426a444bd4687cd874c168578679b1cc1e4c903de9e0d35c86bfca2f899",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgTT3IMBMXGtuKdWrlmmxjOEf3hzkvxAhxYcytdjl6MfcKp3BheWxvYWTESpcCDcQgFeGUJqREvUaHzYdMFoV4Z5scweTJA96eDTXIa/yi+JnEIC6hacSTvOAbKVmgJTFqAV+GhGebeDxUwC1pVghWOeH/AgHCo3NpZ8RAi0uWgxjqlF3lcieiVd/hKpt/vx6M5dEP//5iCr+hme5omwr2LuFcnLTeoRv0M8HdLprrjRFpmrt/FRjolGssC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICD5HVkRjxbfWSfoi1niCrrpyjaVN0ychgQaGZO/w0oTo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fake143
+
+==================================================================

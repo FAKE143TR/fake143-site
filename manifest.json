@@ -1,0 +1,27 @@
+{
+    "name": "FAKE143 | Web3 Operator",
+    "short_name": "FAKE143",
+    "description": "Crypto trader, node operator, and airdrop researcher. Trading markets, running nodes, exploring Web3.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#050505",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "categories": ["finance", "technology"]
+}

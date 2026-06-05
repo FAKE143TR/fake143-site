@@ -499,3 +499,92 @@
                 </a>
                 <a href="https://t.me/FakeAirdropX" target="_blank" class="project-card" style="text-decoration:none;color:inherit">
                     <h3>🎁 FakeAirdropX</h3>
+                    <p>9,500+ airdrop research posts published since 2022. Multi-chain coverage, early alpha, and verified opportunities.</p>
+                    <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;background:#22c55e10;padding:2px 8px;border-radius:4px">● Active</span>
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">9,500+ posts</span>
+                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">Since 2022</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <hr class="divider">
+        <section id="stats" class="fade-in">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">83</div>
+                    <div class="stat-label">Registered Tools</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">189</div>
+                    <div class="stat-label">Skill Modules</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Networks Explored</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Years in Crypto</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Research</h4>
+                <a href="https://t.me/FakeAirdropX" target="_blank">FakeAirdropX</a>
+                <a href="https://x.com/FAKE143_" target="_blank">@FAKE143_</a>
+            </div>
+            <div class="footer-col">
+                <h4>Infrastructure</h4>
+                <a href="/fakeai/">FAKEAI Agent</a>
+                <a href="https://pearl.fake143.xyz">Pearl Calculator</a>
+                <a href="/proof/">Proof Ledger</a>
+            </div>
+            <div class="footer-col">
+                <h4>Automation</h4>
+                <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
+                <a href="/fakeai/capabilities">Capabilities</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Founded by FAKE143</span>
+            <span>Web3 Operator · Crypto Infrastructure · Automation</span>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>

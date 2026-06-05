@@ -39,7 +39,6 @@
       padding: 4rem 2rem;
     }
 
-    /* Header */
     .ledger-header {
       margin-bottom: 3rem;
       padding-bottom: 2rem;
@@ -53,9 +52,7 @@
       letter-spacing: -0.02em;
     }
 
-    .ledger-header h1 span {
-      color: var(--accent);
-    }
+    .ledger-header h1 span { color: var(--accent); }
 
     .ledger-header .subtitle {
       color: var(--muted);
@@ -69,7 +66,18 @@
       font-family: 'JetBrains Mono', 'Fira Code', monospace;
     }
 
-    /* Level Legend */
+    .auto-badge {
+      display: inline-block;
+      background: rgba(0, 255, 136, 0.1);
+      border: 1px solid rgba(0, 255, 136, 0.3);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-left: 0.5rem;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
     .legend {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -103,7 +111,50 @@
     .legend-item.l3 .level { color: var(--warning); }
     .legend-item.l4 .level { color: #ff6b6b; }
 
-    /* Metrics Grid */
+    .disclaimer {
+      background: rgba(255, 170, 0, 0.05);
+      border: 1px solid rgba(255, 170, 0, 0.2);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .disclaimer p {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .disclaimer strong { color: var(--warning); }
+
+    .phase-box {
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .phase-box .phase-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .phase-box .phase-text {
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .phase-box .phase-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
     .metrics-section {
       margin-bottom: 3rem;
     }
@@ -169,7 +220,6 @@
       font-family: 'JetBrains Mono', 'Fira Code', monospace;
     }
 
-    /* Project Table */
     .project-table {
       width: 100%;
       border-collapse: collapse;
@@ -193,22 +243,16 @@
       font-size: 0.85rem;
     }
 
-    .project-table tr:last-child td {
-      border-bottom: none;
-    }
+    .project-table tr:last-child td { border-bottom: none; }
 
-    .project-name {
-      font-weight: 600;
-    }
+    .project-name { font-weight: 600; }
 
     .project-name a {
       color: var(--text);
       text-decoration: none;
     }
 
-    .project-name a:hover {
-      color: var(--accent);
-    }
+    .project-name a:hover { color: var(--accent); }
 
     .level-badge {
       display: inline-block;
@@ -224,18 +268,6 @@
     .level-badge.l3 { background: rgba(255, 170, 0, 0.15); color: var(--warning); }
     .level-badge.l4 { background: rgba(255, 107, 107, 0.15); color: #ff6b6b; }
 
-    .status-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      margin-right: 0.5rem;
-    }
-
-    .status-dot.live { background: var(--accent); }
-    .status-dot.active { background: var(--warning); }
-    .status-dot.paused { background: var(--muted); }
-
     .note {
       color: var(--muted);
       font-size: 0.8rem;
@@ -248,7 +280,6 @@
       font-family: 'JetBrains Mono', 'Fira Code', monospace;
     }
 
-    /* Principles */
     .principles {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -276,33 +307,10 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .principles li:last-child {
-      border-bottom: none;
-    }
+    .principles li:last-child { border-bottom: none; }
 
-    .principles li strong {
-      color: var(--text);
-    }
+    .principles li strong { color: var(--text); }
 
-    /* Disclaimer */
-    .disclaimer {
-      background: rgba(255, 170, 0, 0.05);
-      border: 1px solid rgba(255, 170, 0, 0.2);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .disclaimer p {
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-
-    .disclaimer strong {
-      color: var(--warning);
-    }
-
-    /* Footer */
     .ledger-footer {
       padding-top: 2rem;
       border-top: 1px solid var(--border);
@@ -318,8 +326,13 @@
       text-decoration: none;
     }
 
-    .ledger-footer a:hover {
-      text-decoration: underline;
+    .ledger-footer a:hover { text-decoration: underline; }
+
+    .loading {
+      color: var(--muted);
+      font-style: italic;
+      padding: 2rem;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
@@ -339,7 +352,10 @@
     <div class="ledger-header">
       <h1><span>FAKEAI</span> Proof Ledger</h1>
       <p class="subtitle">Verifiable operational metrics. No claims. Only data.</p>
-      <p class="updated">Last updated: 2026-06-05 02:15 UTC+8</p>
+      <p class="updated">
+        <span id="last-updated">Loading...</span>
+        <span class="auto-badge">AUTO-UPDATED</span>
+      </p>
     </div>
 
     <!-- Level Legend -->
@@ -364,50 +380,21 @@
 
     <!-- Disclaimer -->
     <div class="disclaimer">
-      <p><strong>Read this first:</strong> This ledger shows verifiable facts, not marketing. Levels follow the <a href="/proof/#principles" style="color:var(--warning)">Evidence Ladder</a> framework. "L2" means it runs — not that it's proven valuable. "L3" means real external usage exists — not internal capability. If a claim can't be checked, it doesn't appear here.</p>
+      <p><strong>Read this first:</strong> This ledger shows verifiable facts, not marketing. Levels follow the <a href="#principles" style="color:var(--warning)">Evidence Ladder</a> framework. "L2" means it runs — not that it's proven valuable. "L3" means real external usage exists — not internal capability. <strong>All metrics below are auto-collected from live systems.</strong></p>
     </div>
 
     <!-- Current Phase -->
-    <div style="margin-bottom:3rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:8px;text-align:center">
-      <div style="font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--muted);margin-bottom:0.5rem">Current Phase</div>
-      <div style="font-size:1.1rem;color:var(--accent)">From internal capability → external validation</div>
-      <div style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem">Building verifiable proof. Not claiming success before it exists.</div>
+    <div class="phase-box">
+      <div class="phase-label">Current Phase</div>
+      <div class="phase-text" id="phase-text">Loading...</div>
+      <div class="phase-note" id="phase-note"></div>
     </div>
 
     <!-- Operational Metrics -->
     <div class="metrics-section">
       <h2>Operational Metrics</h2>
-      <div class="metrics-grid">
-        <div class="metric-card live">
-          <div class="value">9</div>
-          <div class="label">Public Repos</div>
-          <div class="source">github.com/FAKE143TR</div>
-        </div>
-        <div class="metric-card live">
-          <div class="value">83</div>
-          <div class="label">Registered Tools</div>
-          <div class="source">capability, not usage</div>
-        </div>
-        <div class="metric-card live">
-          <div class="value">189</div>
-          <div class="label">Skill Modules</div>
-          <div class="source">capability, not usage</div>
-        </div>
-        <div class="metric-card build">
-          <div class="value">51</div>
-          <div class="label">Automation Scripts</div>
-          <div class="source">~/.hermes/scripts/</div>
-        </div>
-        <div class="metric-card build">
-          <div class="value">28</div>
-          <div class="label">Knowledge Entries</div>
-          <div class="source">memory, not yet measured for reuse</div>
-        </div>
-        <div class="metric-card usage">
-          <div class="value">188</div>
-          <div class="label">Pearl Visitors</div>
-          <div class="source">external, verifiable</div>
-        </div>
+      <div class="metrics-grid" id="metrics-grid">
+        <div class="loading">Loading live data...</div>
       </div>
     </div>
 
@@ -424,49 +411,8 @@
             <th>Verified</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td class="project-name"><a href="https://fake143.xyz">fake143.xyz</a></td>
-            <td><span class="level-badge l2">L2</span></td>
-            <td>GitHub repo, nginx live, clean URLs</td>
-            <td class="note">No analytics installed. No external usage detected yet.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
-          <tr>
-            <td class="project-name"><a href="https://pearl.fake143.xyz">Pearl Calculator</a></td>
-            <td><span class="level-badge l3">L3</span></td>
-            <td>188 unique visitors, 1,993 page views</td>
-            <td class="note">Public usage detected. Small but real. No testimonials yet.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
-          <tr>
-            <td class="project-name">Trading Engine</td>
-            <td><span class="level-badge l2">L2</span></td>
-            <td>Paper engine running, 4h cron, backtest framework</td>
-            <td class="note">Forward test collecting data. Live readiness: NOT YET. Evidence gate: 50 signals OR 60 days.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
-          <tr>
-            <td class="project-name">FAKEAI Agent</td>
-            <td><span class="level-badge l2">L2</span></td>
-            <td>83 tools, 189 skills, 24/7 running</td>
-            <td class="note">Internal usage only. External usage: not yet. Tools/skills = capability, not proven value.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
-          <tr>
-            <td class="project-name">Edel Automation</td>
-            <td><span class="level-badge l3">L3</span></td>
-            <td>Recurring automation executed hourly</td>
-            <td class="note">Real operations running. Account-specific. No external validation.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
-          <tr>
-            <td class="project-name">Knowledge System</td>
-            <td><span class="level-badge l2">L2</span></td>
-            <td>V4.3 framework, 28 entries, freshness scoring</td>
-            <td class="note">System running. Reuse rate: not measured. Error resolution speed: not measured.</td>
-            <td class="verified">2026-06-05</td>
-          </tr>
+        <tbody id="project-tbody">
+          <tr><td colspan="5" class="loading">Loading live data...</td></tr>
         </tbody>
       </table>
     </div>
@@ -492,5 +438,75 @@
     </div>
 
   </div>
+
+  <script>
+    // Load proof-data.json and render
+    async function loadProofData() {
+      try {
+        const resp = await fetch('/proof/proof-data.json?' + Date.now());
+        if (!resp.ok) throw new Error('Failed to load');
+        const data = await resp.json();
+        render(data);
+      } catch (e) {
+        console.error('Failed to load proof data:', e);
+        document.getElementById('last-updated').textContent = 'Data unavailable — check proof-data.json';
+      }
+    }
+
+    function render(data) {
+      // Update timestamp
+      document.getElementById('last-updated').textContent = 'Last updated: ' + data.updated;
+
+      // Phase
+      document.getElementById('phase-text').textContent = data.current_phase;
+      document.getElementById('phase-note').textContent = data.phase_note;
+
+      // Metrics
+      const m = data.metrics;
+      const grid = document.getElementById('metrics-grid');
+      grid.innerHTML = '';
+
+      const metrics = [
+        { value: m.github.repos, label: 'Public Repos', source: m.github.source, cls: 'live' },
+        { value: m.github.total_commits, label: 'Total Commits', source: 'all repos', cls: 'build' },
+        { value: m.capabilities.tools, label: 'Registered Tools', source: m.capabilities.note, cls: 'live' },
+        { value: m.capabilities.skills, label: 'Skill Modules', source: m.capabilities.note, cls: 'live' },
+        { value: m.capabilities.scripts, label: 'Automation Scripts', source: '~/.hermes/scripts/', cls: 'build' },
+        { value: m.operations.memory_entries, label: 'Knowledge Entries', source: 'memory, not yet measured for reuse', cls: 'build' },
+        { value: m.usage.nginx_visitors, label: 'Unique Visitors', source: m.usage.source, cls: 'usage' },
+        { value: m.usage.trading_signals, label: 'Trading Signals', source: 'paper_trades.db', cls: 'usage' }
+      ];
+
+      metrics.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'metric-card ' + item.cls;
+        card.innerHTML = `
+          <div class="value">${item.value.toLocaleString()}</div>
+          <div class="label">${item.label}</div>
+          <div class="source">${item.source}</div>
+        `;
+        grid.appendChild(card);
+      });
+
+      // Projects
+      const tbody = document.getElementById('project-tbody');
+      tbody.innerHTML = '';
+
+      data.projects.forEach(p => {
+        const tr = document.createElement('tr');
+        const linkHtml = p.link ? `<a href="${p.link}">${p.name}</a>` : p.name;
+        tr.innerHTML = `
+          <td class="project-name">${linkHtml}</td>
+          <td><span class="level-badge ${p.level.toLowerCase()}">${p.level}</span></td>
+          <td>${p.evidence}</td>
+          <td class="note">${p.notes}</td>
+          <td class="verified">${p.verified}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    loadProofData();
+  </script>
 </body>
 </html>

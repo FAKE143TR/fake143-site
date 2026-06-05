@@ -1,0 +1,96 @@
+{
+  "updated": "2026-06-05 08:40 UTC+8",
+  "updated_iso": "2026-06-05T08:40:27.135331+08:00",
+  "metrics": {
+    "github": {
+      "repos": 9,
+      "total_commits": 396,
+      "repo_names": [
+        "04-zkapp-browser-ui",
+        "bad-rabbits-mint",
+        "fake143-site",
+        "hop-airdrop",
+        "mimo-reasoning-studio",
+        "pearl-dashboard",
+        "test-commit",
+        "thejay-games",
+        "trading-engine"
+      ],
+      "source": "github.com/FAKE143TR"
+    },
+    "capabilities": {
+      "tools": 84,
+      "skills": 189,
+      "scripts": 52,
+      "note": "capability, not usage"
+    },
+    "operations": {
+      "memory_entries": 0,
+      "cronjobs": 1,
+      "source": "hermes memory + crontab"
+    },
+    "usage": {
+      "nginx_visitors": 561,
+      "nginx_requests": 71911,
+      "trading_signals": 0,
+      "source": "nginx access logs + trading db"
+    },
+    "sites": {
+      "fake143_xyz": true,
+      "pearl_fake143_xyz": true,
+      "source": "curl 200 check"
+    }
+  },
+  "projects": [
+    {
+      "name": "fake143.xyz",
+      "level": "L2",
+      "evidence": "GitHub repo, nginx live, 561 visitors",
+      "notes": "Analytics not yet installed. Visitor count from server logs.",
+      "verified": "2026-06-05",
+      "link": "https://fake143.xyz"
+    },
+    {
+      "name": "Pearl Calculator",
+      "level": "L3",
+      "evidence": "561 unique visitors, live pool data",
+      "notes": "Public usage detected. Small but real. No testimonials yet.",
+      "verified": "2026-06-05",
+      "link": "https://pearl.fake143.xyz"
+    },
+    {
+      "name": "Trading Engine",
+      "level": "L2",
+      "evidence": "Paper engine running, 0 signals collected",
+      "notes": "Forward test collecting data. Live readiness: NOT YET.",
+      "verified": "2026-06-05",
+      "link": null
+    },
+    {
+      "name": "FAKEAI Agent",
+      "level": "L2",
+      "evidence": "84 tools, 189 skills, 24/7 running",
+      "notes": "Internal usage only. External usage: not yet.",
+      "verified": "2026-06-05",
+      "link": null
+    },
+    {
+      "name": "Edel Automation",
+      "level": "L3",
+      "evidence": "Recurring automation executed hourly",
+      "notes": "Real operations running. Account-specific. No external validation.",
+      "verified": "2026-06-05",
+      "link": null
+    },
+    {
+      "name": "Knowledge System",
+      "level": "L2",
+      "evidence": "V4.3 framework, 0 entries, freshness scoring",
+      "notes": "Reuse rate: not measured. Error resolution speed: not measured.",
+      "verified": "2026-06-05",
+      "link": null
+    }
+  ],
+  "current_phase": "From internal capability \u2192 external validation",
+  "phase_note": "Building verifiable proof. Not claiming success before it exists."
+}

@@ -63,7 +63,7 @@
       "link": null
     },
     {
-      "name": "FAKEAI Agent",
+      "name": "Infrastructure Agent",
       "level": "L2",
       "evidence": "84 tools, 189 skills, 24/7 running",
       "notes": "Internal usage only. External usage: not yet.",

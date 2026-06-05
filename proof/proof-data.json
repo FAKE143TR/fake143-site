@@ -15,8 +15,7 @@
         "test-commit",
         "thejay-games",
         "trading-engine"
-      ],
-      "source": "github.com/FAKE143TR"
+      ]
     },
     "capabilities": {
       "tools": 84,
@@ -26,19 +25,16 @@
     },
     "operations": {
       "memory_entries": 0,
-      "cronjobs": 1,
-      "source": "hermes memory + crontab"
+      "cronjobs": 1
     },
     "usage": {
       "nginx_visitors": 561,
       "nginx_requests": 71911,
-      "trading_signals": 0,
-      "source": "nginx access logs + trading db"
+      "trading_signals": 0
     },
     "sites": {
       "fake143_xyz": true,
-      "pearl_fake143_xyz": true,
-      "source": "curl 200 check"
+      "pearl_fake143_xyz": true
     }
   },
   "projects": [

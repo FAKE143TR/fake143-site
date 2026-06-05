@@ -1,590 +1,952 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAKE143 | Web3 Operator</title>
-    <link rel="icon" href="favicon.ico" sizes="32x32">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="favicon-180.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#050505">
-    <meta name="google-site-verification" content="tgXxd8HLxbGZ6eUzWMvUIpHjEW59u2FNGRcoKSOS1pA">
-    <meta name="description" content="FAKE143 — Building autonomous crypto infrastructure. Research, automation, and execution across Web3.">
-    <meta name="keywords" content="crypto, web3, trading, node operator, airdrop, blockchain, ethereum, FAKEAI, automation">
-    <meta name="author" content="FAKE143">
-    <meta property="og:title" content="FAKE143 | Web3 Operator & Builder">
-    <meta property="og:description" content="Building autonomous crypto infrastructure. Research. Automation. Execution.">
-    <meta property="og:image" content="https://fake143.xyz/og-image.png">
-    <meta property="og:url" content="https://fake143.xyz">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FAKE143 | Web3 Operator & Builder">
-    <meta name="twitter:description" content="Building autonomous crypto infrastructure. Research. Automation. Execution.">
-    <meta name="twitter:image" content="https://fake143.xyz/og-image.png">
-    <link rel="canonical" href="https://fake143.xyz/">
-    <!-- Plausible Analytics — activate at plausible.io, replace data-domain -->
-    <script defer data-domain="fake143.xyz" src="https://plausible.io/js/script.js"></script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "FAKE143",
-        "url": "https://fake143.xyz",
-        "image": "https://fake143.xyz/og-image.png",
-        "description": "Building autonomous crypto infrastructure. Research, automation, and execution across Web3.",
-        "sameAs": [
-            "https://x.com/FAKE143_",
-            "https://github.com/FAKE143TR",
-            "https://t.me/FakeAirdropX"
-        ],
-        "jobTitle": "Web3 Operator",
-        "knowsAbout": ["Cryptocurrency", "Airdrops", "Node Operations", "Trading", "Blockchain", "DeFi"],
-        "email": "me@fake143.xyz"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAKE143 — Web3 Operator</title>
+  <meta name="description" content="FAKE143 — Web3 operator. Research, infrastructure, and automation across 50+ networks since 2022.">
+  <meta property="og:title" content="FAKE143 — Web3 Operator">
+  <meta property="og:description" content="Research, infrastructure, and automation across 50+ networks since 2022.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fake143.xyz">
+  <link rel="canonical" href="https://fake143.xyz">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0a0a0a;
+      --surface-2: #0f0f0f;
+      --border: #1a1a1a;
+      --border-light: #222;
+      --text: #e8e8e8;
+      --text-dim: #888;
+      --muted: #555;
+      --pink: #ff2d78;
+      --pink-dim: #cc2360;
+      --green: #00ff88;
+      --green-dim: #00cc6a;
+      --blue: #4a9eff;
+      --orange: #ffaa00;
+      --mono: 'JetBrains Mono', 'Fira Code', monospace;
     }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box}
-        :root{
-            --bg:#050505;--surface:#0a0a0a;--card:#0f0f0f;
-            --border:#1a1a1a;--border-hover:#2a2a2a;
-            --text:#a0a0a0;--heading:#ffffff;--muted:#555;
-            --pink:#ff1493;--pink-glow:rgba(255,20,147,0.15);
-            --purple:#7a7aff;--purple-glow:rgba(122,122,255,0.15);
-        }
-        html{scroll-behavior:smooth}
-        body{
-            background:var(--bg);color:var(--text);
-            font-family:'Inter',-apple-system,sans-serif;
-            line-height:1.7;-webkit-font-smoothing:antialiased;
-            overflow-x:hidden;
-        }
-        ::selection{background:var(--pink);color:var(--bg)}
 
-        /* Grid Background */
-        .bg-grid{
-            position:fixed;top:0;left:0;width:100%;height:100%;
-            pointer-events:none;z-index:0;
-            background-image:
-                linear-gradient(rgba(255,20,147,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,20,147,0.03) 1px, transparent 1px);
-            background-size:60px 60px;
-        }
-        
-        /* Particles Canvas */
-        #particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .container{max-width:1000px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+    html { scroll-behavior: smooth; }
 
-        /* Nav */
-        nav{
-            position:fixed;top:0;left:0;right:0;z-index:100;
-            padding:16px 0;
-            background:rgba(5,5,5,0.85);backdrop-filter:blur(20px);
-            border-bottom:1px solid transparent;
-            transition:border-color 0.3s;
-        }
-        nav.scrolled{border-bottom-color:var(--border)}
-        nav .container{display:flex;justify-content:space-between;align-items:center}
-        .nav-brand{display:flex;align-items:center;gap:10px}
-        .nav-logo{width:32px;height:32px;border-radius:8px;object-fit:cover}
-        .nav-name{
-            font-family:'JetBrains Mono',monospace;font-size:0.9rem;
-            font-weight:600;color:var(--heading);letter-spacing:-0.5px;
-        }
-        .nav-links{display:flex;gap:24px;align-items:center}
-        .nav-links a{
-            color:var(--muted);text-decoration:none;font-size:0.8rem;
-            font-weight:500;transition:color 0.2s;
-        }
-        .nav-links a:hover{color:var(--pink)}
-        .nav-cta{
-            background:var(--pink);color:#fff;padding:6px 14px;
-            border-radius:6px;font-size:0.75rem;font-weight:600;
-            text-decoration:none;transition:all 0.2s;
-        }
-        .nav-cta:hover{opacity:0.9;color:#fff}
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        /* Hero */
-        .hero{
-            padding:140px 0 80px;text-align:center;
-            position:relative;
-        }
-        /* Full background watermark */
-        .bg-watermark{
-            position:fixed;
-            top:50%;left:50%;
-            transform:translate(-50%,-50%);
-            width:600px;height:600px;
-            opacity:0.20;
-            pointer-events:none;
-            z-index:0;
-            filter:grayscale(100%);
-            mix-blend-mode:screen;
-        }
-        .hero-content{position:relative;z-index:1}
-        .hero-badge{
-            display:inline-flex;align-items:center;gap:8px;
-            padding:6px 16px;border-radius:20px;
-            background:var(--pink-glow);border:1px solid rgba(255,20,147,0.2);
-            margin-bottom:24px;
-        }
-        .hero-badge span{
-            font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-            color:var(--pink);letter-spacing:2px;font-weight:600;
-        }
-        .hero h1{
-            font-size:4rem;font-weight:800;color:var(--heading);
-            letter-spacing:-2px;line-height:1.05;margin-bottom:16px;
-            background:linear-gradient(135deg,#fff 0%,#ff1493 50%,#7a7aff 100%);
-            -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-            background-clip:text;
-        }
-        .hero-sub{
-            font-size:1.3rem;color:var(--text);font-weight:400;
-            letter-spacing:-0.3px;margin-bottom:12px;
-        }
-        .hero-sub em{color:var(--pink);font-style:normal;font-weight:600}
-        .hero-desc{
-            font-size:0.95rem;color:var(--muted);max-width:520px;
-            margin:0 auto 36px;line-height:1.8;
-        }
-        .hero-buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-        .btn{
-            padding:10px 22px;border-radius:8px;font-size:0.85rem;
-            font-weight:600;text-decoration:none;transition:all 0.2s;
-            border:1px solid var(--border);color:var(--text);
-            font-family:'JetBrains Mono',monospace;cursor:pointer;
-        }
-        .btn:hover{border-color:var(--pink);color:var(--pink)}
-        .btn-primary{
-            background:var(--pink);color:#fff;border-color:var(--pink);
-            box-shadow:0 0 20px var(--pink-glow);
-        }
-        .btn-primary:hover{opacity:0.9;color:#fff;box-shadow:0 0 30px rgba(255,20,147,0.3)}
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(20px);
+      background: rgba(5,5,5,0.8);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+    }
 
-        /* Divider */
-        .divider{border:none;border-top:1px solid var(--border);margin:60px 0}
+    nav.scrolled { border-bottom-color: var(--border); }
 
-        /* Section Header */
-        .section-header{text-align:center;margin-bottom:48px}
-        .section-label{
-            font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-            color:var(--pink);letter-spacing:3px;text-transform:uppercase;
-            margin-bottom:12px;
-        }
-        .section-title{
-            font-size:2rem;font-weight:700;color:var(--heading);
-            letter-spacing:-1px;
-        }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
 
-        /* About */
-        .about-grid{
-            display:grid;grid-template-columns:1fr 1fr;gap:32px;
-        }
-        @media(max-width:768px){.about-grid{grid-template-columns:1fr}}
-        .about-card{
-            background:var(--card);border:1px solid var(--border);
-            border-radius:12px;padding:28px;transition:all 0.3s;
-        }
-        .about-card:hover{border-color:var(--pink);box-shadow:0 0 20px var(--pink-glow)}
-        .about-card h3{
-            font-size:1.1rem;font-weight:700;color:var(--heading);
-            margin-bottom:12px;display:flex;align-items:center;gap:8px;
-        }
-        .about-card p{font-size:0.9rem;color:var(--text);line-height:1.8}
+    .nav-logo svg { width: 28px; height: 28px; }
 
-        /* Focus Grid */
-        .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-        @media(max-width:768px){.focus-grid{grid-template-columns:1fr}}
-        .focus-item{
-            background:var(--card);border:1px solid var(--border);
-            border-radius:12px;padding:24px;transition:all 0.3s;
-            position:relative;overflow:hidden;
-        }
-        .focus-item:hover{border-color:var(--pink);transform:translateY(-2px)}
-        .focus-item::before{
-            content:'';position:absolute;top:0;left:0;right:0;height:2px;
-            background:linear-gradient(90deg,var(--pink),var(--purple));
-            opacity:0;transition:opacity 0.3s;
-        }
-        .focus-item:hover::before{opacity:1}
-        .focus-icon{font-size:1.5rem;margin-bottom:12px}
-        .focus-item h3{font-size:0.95rem;font-weight:700;color:var(--heading);margin-bottom:6px}
-        .focus-item p{font-size:0.8rem;color:var(--text);line-height:1.7}
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
 
-        /* Timeline */
-        .timeline{position:relative;max-width:600px;margin:0 auto}
-        .timeline::before{
-            content:'';position:absolute;left:20px;top:0;bottom:0;
-            width:2px;background:linear-gradient(var(--pink),var(--purple));
-        }
-        .timeline-item{
-            position:relative;padding-left:56px;margin-bottom:32px;
-        }
-        .timeline-dot{
-            position:absolute;left:14px;top:4px;
-            width:14px;height:14px;border-radius:50%;
-            background:var(--pink);border:2px solid var(--bg);
-            box-shadow:0 0 10px var(--pink-glow);
-        }
-        .timeline-year{
-            font-family:'JetBrains Mono',monospace;font-size:0.75rem;
-            color:var(--pink);font-weight:600;margin-bottom:4px;
-        }
-        .timeline-content{
-            font-size:0.9rem;color:var(--text);line-height:1.6;
-        }
+    .nav-links a {
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-        /* Projects */
-        .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-        @media(max-width:768px){.projects-grid{grid-template-columns:1fr}}
-        .project-card{
-            background:var(--card);border:1px solid var(--border);
-            border-radius:12px;padding:28px;transition:all 0.3s;
-            position:relative;overflow:hidden;
-        }
-        .project-card:hover{border-color:var(--pink);transform:translateY(-2px)}
-        .project-card::before{
-            content:'';position:absolute;top:0;left:0;right:0;height:2px;
-            background:linear-gradient(90deg,var(--pink),var(--purple));
-            opacity:0;transition:opacity 0.3s;
-        }
-        .project-card:hover::before{opacity:1}
-        .project-card h3{font-size:1rem;font-weight:700;color:var(--heading);margin-bottom:8px}
-        .project-card p{font-size:0.85rem;color:var(--text);line-height:1.7}
+    .nav-links a:hover { color: var(--text); }
 
-        /* Stats */
-        .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-        @media(max-width:768px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
-        .stat-item{text-align:center;padding:24px}
-        .stat-value{
-            font-family:'JetBrains Mono',monospace;font-size:2rem;
-            font-weight:800;color:var(--pink);
-        }
-        .stat-label{font-size:0.75rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px}
+    .nav-status {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--green);
+      background: rgba(0,255,136,0.05);
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(0,255,136,0.15);
+    }
 
-        /* Quote */
-        .quote-section{padding:80px 0;text-align:center}
-        .quote{
-            font-size:1.8rem;font-weight:700;color:var(--heading);
-            letter-spacing:-1px;line-height:1.4;max-width:600px;margin:0 auto;
-        }
-        .quote em{color:var(--pink);font-style:normal}
-        .quote-author{
-            font-family:'JetBrains Mono',monospace;font-size:0.75rem;
-            color:var(--muted);margin-top:16px;
-        }
+    .nav-status .pulse {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
 
-        /* Contact */
-        .contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-        @media(max-width:768px){.contact-grid{grid-template-columns:1fr}}
-        .contact-card{
-            background:var(--card);border:1px solid var(--border);
-            border-radius:12px;padding:24px;text-align:center;transition:all 0.3s;
-            text-decoration:none;color:var(--text);
-        }
-        .contact-card:hover{border-color:var(--pink);color:var(--pink)}
-        .contact-icon{font-size:1.5rem;margin-bottom:8px}
-        .contact-card h4{font-size:0.9rem;font-weight:600;color:var(--heading);margin-bottom:4px}
-        .contact-card p{font-size:0.8rem;color:var(--muted)}
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
 
-        /* Footer */
-        footer{padding:40px 0;border-top:1px solid var(--border);margin-top:60px}
-        .footer-content{
-            display:flex;justify-content:space-between;align-items:center;
-            flex-wrap:wrap;gap:16px;
-        }
-        .footer-copy{
-            font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-            color:var(--muted);
-        }
-        .footer-links{display:flex;gap:20px}
-        .footer-links a{
-            font-family:'JetBrains Mono',monospace;font-size:0.75rem;
-            color:var(--muted);text-decoration:none;transition:color 0.2s;
-        }
-        .footer-links a:hover{color:var(--pink)}
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* Scroll animations */
-        .fade-in{opacity:0;transform:translateY(20px);transition:all 0.6s ease-out}
-        .fade-in.visible{opacity:1;transform:translateY(0)}
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,45,120,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-        /* Mobile */
-        @media(max-width:640px){
-            .hero h1{font-size:2.5rem}
-            .hero-sub{font-size:1.1rem}
-            .hero{padding:120px 0 60px}
-            .nav-links{gap:16px}
-            .quote{font-size:1.4rem}
-            .bg-watermark{width:350px;height:350px}
-        }
-    </style>
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,45,120,0.08);
+      border: 1px solid rgba(255,45,120,0.2);
+      padding: 6px 16px;
+      border-radius: 24px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--pink);
+      letter-spacing: 0.05em;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--pink);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 .accent { color: var(--pink); }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--text-dim);
+      max-width: 500px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    .hero-sub strong { color: var(--text); font-weight: 600; }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--pink);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--pink-dim);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border-light);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--muted);
+      transform: translateY(-1px);
+    }
+
+    /* LIVE TICKER */
+    .ticker {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      overflow: hidden;
+    }
+
+    .ticker-inner {
+      display: flex;
+      gap: 3rem;
+      animation: scroll 30s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    .ticker-item .label { color: var(--muted); }
+
+    .ticker-item .value { color: var(--text); font-weight: 600; }
+
+    .ticker-item .live {
+      color: var(--green);
+      font-size: 0.65rem;
+      background: rgba(0,255,136,0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 6rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--pink);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      color: var(--text-dim);
+      font-size: 1rem;
+      max-width: 600px;
+      margin-bottom: 3rem;
+    }
+
+    /* ABOUT GRID */
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .about-card:hover { border-color: var(--border-light); }
+
+    .about-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .about-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .about-card p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    /* OPERATIONS */
+    .ops-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .ops-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .ops-card:hover { border-color: var(--border-light); }
+
+    .ops-card .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .ops-card .status.live {
+      color: var(--green);
+      background: rgba(0,255,136,0.08);
+      border: 1px solid rgba(0,255,136,0.2);
+    }
+
+    .ops-card .status.active {
+      color: var(--orange);
+      background: rgba(255,170,0,0.08);
+      border: 1px solid rgba(255,170,0,0.2);
+    }
+
+    .ops-card .status .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+    }
+
+    .ops-card .status.live .dot { background: var(--green); animation: pulse 2s infinite; }
+    .ops-card .status.active .dot { background: var(--orange); animation: pulse 3s infinite; }
+
+    .ops-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .ops-card p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .ops-card .meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .ops-card .meta span {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .ops-card a {
+      color: var(--pink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .ops-card a:hover { text-decoration: underline; }
+
+    /* TIMELINE */
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--pink), var(--green), var(--blue));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -2.35rem;
+      top: 0.5rem;
+      width: 10px;
+      height: 10px;
+      background: var(--bg);
+      border: 2px solid var(--pink);
+      border-radius: 50%;
+    }
+
+    .timeline-item .year {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--pink);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .timeline-item p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      display: block;
+    }
+
+    .project-card:hover {
+      border-color: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .project-card .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .project-card .tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .project-card .tag.live {
+      color: var(--green);
+      background: rgba(0,255,136,0.05);
+      border-color: rgba(0,255,136,0.2);
+    }
+
+    /* STATS */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 4rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat .number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      font-family: var(--mono);
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat .label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.25rem;
+    }
+
+    /* PROOF CTA */
+    .proof-cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin: 4rem auto;
+      max-width: 1100px;
+    }
+
+    .proof-cta h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+
+    .proof-cta p {
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-col h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--text-dim);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.25rem 0;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--text); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-bottom a {
+      color: var(--pink);
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero-sub { font-size: 1rem; }
+      section { padding: 4rem 1.5rem; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); }
+      .stat .number { font-size: 1.8rem; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
 </head>
 <body>
-    <div class="bg-grid" aria-hidden="true"></div>
-    <img src="watermark.png" alt="" class="bg-watermark" aria-hidden="true">
-    <canvas id="particles" aria-hidden="true"></canvas>
 
-    <nav id="nav" aria-label="Main navigation">
-        <div class="container">
-            <a href="https://fake143.xyz/" class="nav-brand" style="text-decoration:none;color:inherit">
-                <img src="favicon.png" alt="FAKE143" class="nav-logo">
-                <div class="nav-name">FAKE143</div>
-            </a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#operations">Operations</a>
-                <a href="#projects">Projects</a>
-                <a href="/fakeai/">FAKEAI</a>
-                <a href="/proof/">Proof</a>
-                <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
-                <a href="https://x.com/FAKE143_" target="_blank">Twitter</a>
-            </div>
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none">
+        <path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M16 6l-8 5.3v10.7L16 27l8-5.3V11.3L16 6z" fill="currentColor" opacity="0.15"/>
+        <path d="M12 14l4-3 4 3-4 3-4-3z" fill="currentColor"/>
+      </svg>
+      FAKE143
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#operations">Operations</a>
+      <a href="#projects">Projects</a>
+      <a href="/proof/">Proof</a>
+      <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
+      <a href="https://x.com/FAKE143_" target="_blank">Twitter</a>
+    </div>
+    <div class="nav-status">
+      <span class="pulse"></span>
+      OPERATIONAL
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      ACTIVE SINCE 2022
+    </div>
+    <h1>I build things<br>that <span class="accent">run.</span></h1>
+    <p class="hero-sub">
+      Web3 operator. <strong>50+ networks</strong>, validators, mining, automation.
+      Not a whitepaper. Not a roadmap. <strong>Running code.</strong>
+    </p>
+    <div class="hero-actions">
+      <a href="#operations" class="btn btn-primary">See What's Running →</a>
+      <a href="/proof/" class="btn btn-ghost">Proof Ledger</a>
+    </div>
+  </section>
+
+  <!-- LIVE TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner" id="ticker">
+      <div class="ticker-item">
+        <span class="label">STATUS</span>
+        <span class="live">● LIVE</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">TOOLS</span>
+        <span class="value">83</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">SKILLS</span>
+        <span class="value">189</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">NETWORKS</span>
+        <span class="value">50+</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">SINCE</span>
+        <span class="value">2022</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">UPTIME</span>
+        <span class="value">24/7</span>
+      </div>
+      <!-- duplicate for seamless scroll -->
+      <div class="ticker-item">
+        <span class="label">STATUS</span>
+        <span class="live">● LIVE</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">TOOLS</span>
+        <span class="value">83</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">SKILLS</span>
+        <span class="value">189</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">NETWORKS</span>
+        <span class="value">50+</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">SINCE</span>
+        <span class="value">2022</span>
+      </div>
+      <div class="ticker-item">
+        <span class="label">UPTIME</span>
+        <span class="value">24/7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">About</div>
+    <h2 class="section-title">What I Actually Do</h2>
+    <p class="section-desc">Not a pitch deck. Not a DAO. One person, running infrastructure across chains since 2022.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="icon">🔬</div>
+        <h3>Research</h3>
+        <p>Deep-dive into emerging protocols. Track on-chain activity. 9,500+ research posts published since 2022 via FakeAirdropX.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">⚡</div>
+        <h3>Infrastructure</h3>
+        <p>Validators, testnet nodes, mining operations across 50+ networks. Pearl PoUW mining. Multi-chain management.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">🤖</div>
+        <h3>Automation</h3>
+        <p>Custom tooling for wallet ops, DeFi automation, market monitoring, and security auditing. Autonomous execution.</p>
+      </div>
+      <div class="about-card">
+        <div class="icon">📊</div>
+        <h3>Tooling</h3>
+        <p>If I need it, I build it. Mining calculators, trading engines, multi-account orchestration. Then I share it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATIONS -->
+  <section id="operations">
+    <div class="section-label">Operations</div>
+    <h2 class="section-title">What's Running Right Now</h2>
+    <p class="section-desc">Live systems. Not prototypes. Not concepts.</p>
+    <div class="ops-grid">
+      <div class="ops-card">
+        <div class="status live"><span class="dot"></span> LIVE</div>
+        <h3>Pearl Mining Calculator</h3>
+        <p>Live Pearl PoUW mining pool tracker. GPU profitability comparison, breakeven analysis, real-time pricing across 5 pools.</p>
+        <div class="meta">
+          <span>5 pools</span>
+          <span>10min refresh</span>
+          <span>SafeTrade OTC</span>
         </div>
-    </nav>
-
-    <div class="container">
-        <!-- Hero -->
-        <div class="hero">
-            <div class="hero-content">
-            <div class="hero-badge">
-                <span>WEB3 • CRYPTO • INFRASTRUCTURE</span>
-            </div>
-            <h1>FAKE143</h1>
-            <div class="hero-sub">
-                Building <em>autonomous crypto</em> infrastructure.
-            </div>
-            <p class="hero-desc">
-                Research. Automation. Execution.<br>
-                Tools, agents, and infrastructure for Web3 operations.
-            </p>
-            <div class="hero-buttons">
-                <a href="#operations" class="btn btn-primary">View Operations</a>
-                <a href="#projects" class="btn">Featured Projects</a>
-            </div>
-            </div>
+        <a href="https://pearl.fake143.xyz" target="_blank">pearl.fake143.xyz →</a>
+      </div>
+      <div class="ops-card">
+        <div class="status active"><span class="dot"></span> PAPER</div>
+        <h3>Trading Engine</h3>
+        <p>Walk-forward validated strategies. Funding rate + Bollinger Band model. Paper trading active, collecting evidence before live.</p>
+        <div class="meta">
+          <span>4h cron</span>
+          <span>0.5% risk/trade</span>
+          <span>Evidence gate: 50 signals</span>
         </div>
-
-        <hr class="divider">
-
-        <!-- About -->
-        <section id="about" class="fade-in">
-            <div class="section-header">
-                <div class="section-label">About</div>
-                <h2 class="section-title">What I Actually Do</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>🔬 Research Ecosystems</h3>
-                    <p>Deep-dive into emerging protocols, track on-chain activity, and identify opportunities before they go mainstream. 9,500+ research posts published via FakeAirdropX since 2022.</p>
-                </div>
-                <div class="about-card">
-                    <h3>⚡ Run Infrastructure</h3>
-                    <p>Validators, testnet nodes, and mining operations across 50+ networks. Active Pearl PoUW mining, node monitoring, and multi-chain infrastructure management.</p>
-                </div>
-                <div class="about-card">
-                    <h3>🤖 Build Automation</h3>
-                    <p>FAKEAI — autonomous crypto intelligence agent with 83 registered tools. Wallet ops, NFT sniping, DeFi automation, market monitoring, and security auditing. Running 24/7.</p>
-                </div>
-                <div class="about-card">
-                    <h3>📊 Develop Tools</h3>
-                    <p>Pearl Mining Calculator, trading engines, multi-account orchestration, and custom dashboards. If I need it, I build it — then share it.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <!-- Current Operations -->
-        <section id="operations" class="fade-in">
-            <div class="section-header">
-                <div class="section-label">Operations</div>
-                <h2 class="section-title">Current Operations</h2>
-            </div>
-            <div class="focus-grid">
-                <div class="focus-item">
-                    <div class="focus-icon">🦅</div>
-                    <h3>FAKEAI Agent</h3>
-                    <p>Autonomous crypto intelligence — multi-chain wallet ops, NFT sniping, DeFi automation, market monitoring. <a href="/fakeai/" style="color:var(--pink)">FAKEAI Docs →</a></p>
-                    <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;margin-top:8px;display:inline-block;background:#22c55e10;padding:2px 8px;border-radius:4px">● Active — 83 tools · 188 skills</span>
-                </div>
-                <div class="focus-item">
-                    <div class="focus-icon">📊</div>
-                    <h3>Pearl Mining Calculator</h3>
-                    <p>Live pool tracking, GPU profitability comparison, and breakeven analysis for Pearl PoUW mining.</p>
-                    <a href="https://pearl.fake143.xyz" style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;margin-top:8px;display:inline-block;background:#22c55e10;padding:2px 8px;border-radius:4px;text-decoration:none">● Live — pearl.fake143.xyz</a>
-                </div>
-                <div class="focus-item">
-                    <div class="focus-icon">📈</div>
-                    <h3>Trading Engine</h3>
-                    <p>Walk-forward validated strategies, paper trading active. Funding rate + Bollinger Band model. Evidence gate: 50 signals before live.</p>
-                    <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--purple);margin-top:8px;display:inline-block;background:rgba(122,122,255,0.1);padding:2px 8px;border-radius:4px">● Paper Trading</span>
-                </div>
-                <div class="focus-item">
-                    <div class="focus-icon">⚡</div>
-                    <h3>Node Portfolio</h3>
-                    <p>Validators, testnet nodes, and mining operations across 50+ networks. Multi-chain infrastructure management.</p>
-                    <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;margin-top:8px;display:inline-block;background:#22c55e10;padding:2px 8px;border-radius:4px">● Active</span>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <!-- Selected Achievements -->
-        <section id="journey" class="fade-in">
-            <div class="section-header">
-                <div class="section-label">Track Record</div>
-                <h2 class="section-title">Selected Achievements</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-year">2022</div>
-                    <div class="timeline-content"><strong>FakeAirdropX</strong> — Launched community-driven airdrop research channel. 9,500+ posts published, daily Web3 opportunity tracking, testnet guides, and whitelist alerts.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-year">2023</div>
-                    <div class="timeline-content"><strong>Node Operations</strong> — 50+ networks explored. Validators, testnets, and incentivized programs. Built multi-wallet automation for scalable node management.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-year">2024</div>
-                    <div class="timeline-content"><strong>Infrastructure Scaling</strong> — Multi-chain tooling, ecosystem research automation, and on-chain data pipelines. Expanded into AI-powered crypto workflows.</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-year">2025</div>
-                    <div class="timeline-content"><strong>Trading Engine</strong> — Walk-forward validated quantitative strategies. Funding rate + Bollinger Band model. Paper trading with evidence gate (50 signals before live).</div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-year">2026</div>
-                    <div class="timeline-content"><strong>FAKEAI</strong> — Autonomous crypto intelligence agent. 83 registered tools, knowledge system V4.3, error pattern database, multi-account automation. Running 24/7.</div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="divider">
-
-        <!-- Featured Projects -->
-        <section id="projects" class="fade-in">
-            <div class="section-header">
-                <div class="section-label">Projects</div>
-                <h2 class="section-title">Featured Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <a href="/fakeai/" class="project-card" style="text-decoration:none;color:inherit">
-                    <h3>🦅 FAKEAI</h3>
-                    <p>Autonomous crypto intelligence agent. 83 registered tools, knowledge system V4.3, error pattern database, multi-account orchestration. Wallet ops, NFT sniping, DeFi automation, security auditing — all running 24/7.</p>
-                    <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;background:#22c55e10;padding:2px 8px;border-radius:4px">● Live</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">83 tools · 188 skills</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">V4.3</span>
-                    </div>
-                </a>
-                <a href="https://pearl.fake143.xyz" target="_blank" class="project-card" style="text-decoration:none;color:inherit">
-                    <h3>📊 Pearl Mining Calculator</h3>
-                    <p>Live Pearl PoUW mining pool tracker with GPU profitability comparison, breakeven analysis, and real-time pricing. 5 pools tracked, 10-minute refresh, SafeTrade OTC pricing.</p>
-                    <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;background:#22c55e10;padding:2px 8px;border-radius:4px">● Live</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">5 pools</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">10min refresh</span>
-                    </div>
-                </a>
-                <a href="https://t.me/FakeAirdropX" target="_blank" class="project-card" style="text-decoration:none;color:inherit">
-                    <h3>🎁 FakeAirdropX</h3>
-                    <p>9,500+ airdrop research posts published since 2022. Multi-chain coverage, early alpha, and verified opportunities.</p>
-                    <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#22c55e;background:#22c55e10;padding:2px 8px;border-radius:4px">● Active</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">9,500+ posts</span>
-                        <span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--muted)">Since 2022</span>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <!-- Stats -->
-        <hr class="divider">
-        <section id="stats" class="fade-in">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">83</div>
-                    <div class="stat-label">Registered Tools</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">189</div>
-                    <div class="stat-label">Skill Modules</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Networks Explored</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Years in Crypto</div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Research</h4>
-                <a href="https://t.me/FakeAirdropX" target="_blank">FakeAirdropX</a>
-                <a href="https://x.com/FAKE143_" target="_blank">@FAKE143_</a>
-            </div>
-            <div class="footer-col">
-                <h4>Infrastructure</h4>
-                <a href="/fakeai/">FAKEAI Agent</a>
-                <a href="https://pearl.fake143.xyz">Pearl Calculator</a>
-                <a href="/proof/">Proof Ledger</a>
-            </div>
-            <div class="footer-col">
-                <h4>Automation</h4>
-                <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
-                <a href="/fakeai/capabilities">Capabilities</a>
-            </div>
+      </div>
+      <div class="ops-card">
+        <div class="status live"><span class="dot"></span> LIVE</div>
+        <h3>Node Portfolio</h3>
+        <p>Validators and testnet nodes across multiple chains. Active monitoring, auto-restart, performance tracking.</p>
+        <div class="meta">
+          <span>Multi-chain</span>
+          <span>24/7 monitoring</span>
         </div>
-        <div class="footer-bottom">
-            <span>Founded by FAKE143</span>
-            <span>Web3 Operator · Crypto Infrastructure · Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="section-label">Track Record</div>
+    <h2 class="section-title">What I've Shipped</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="year">2022</div>
+        <h3>FakeAirdropX Launched</h3>
+        <p>Started publishing airdrop research. 9,500+ posts over 4 years. Multi-chain coverage, early alpha, verified opportunities.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2023</div>
+        <h3>Node Operations Expanded</h3>
+        <p>Validators and testnets across 50+ networks. Infrastructure management, monitoring, multi-account orchestration.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2024</div>
+        <h3>Custom Tooling</h3>
+        <p>Built mining calculators, trading engines, automation frameworks. Open-sourced what I could. Kept what I needed.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">2026</div>
+        <h3>Proof Ledger</h3>
+        <p>Public verifiable metrics. Auto-updated from live systems. No claims without data. <a href="/proof/" style="color:var(--pink)">fake143.xyz/proof →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">Projects</div>
+    <h2 class="section-title">Featured</h2>
+    <div class="projects-grid">
+      <a href="https://pearl.fake143.xyz" target="_blank" class="project-card">
+        <h3>📊 Pearl Mining Calculator</h3>
+        <p>Live Pearl PoUW mining pool tracker with GPU profitability comparison, breakeven analysis, and real-time pricing.</p>
+        <div class="tags">
+          <span class="tag live">● Live</span>
+          <span class="tag">5 pools</span>
+          <span class="tag">10min refresh</span>
         </div>
-    </footer>
+      </a>
+      <a href="https://t.me/FakeAirdropX" target="_blank" class="project-card">
+        <h3>🎁 FakeAirdropX</h3>
+        <p>9,500+ airdrop research posts since 2022. Multi-chain coverage, early alpha, verified opportunities.</p>
+        <div class="tags">
+          <span class="tag live">● Active</span>
+          <span class="tag">9,500+ posts</span>
+          <span class="tag">Since 2022</span>
+        </div>
+      </a>
+      <a href="https://github.com/FAKE143TR" target="_blank" class="project-card">
+        <h3>🛠 Open Source</h3>
+        <p>Public repos on GitHub. Mining tools, trading engines, site source. Proof of work, not proof of claims.</p>
+        <div class="tags">
+          <span class="tag">GitHub</span>
+          <span class="tag">Public repos</span>
+        </div>
+      </a>
+    </div>
+  </section>
 
-    <script>
-        // Fade-in on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+  <!-- STATS -->
+  <section style="padding-top:0">
+    <div class="stats-bar">
+      <div class="stat">
+        <div class="number">83</div>
+        <div class="label">Registered Tools</div>
+      </div>
+      <div class="stat">
+        <div class="number">189</div>
+        <div class="label">Skill Modules</div>
+      </div>
+      <div class="stat">
+        <div class="number">50+</div>
+        <div class="label">Networks</div>
+      </div>
+      <div class="stat">
+        <div class="number">5</div>
+        <div class="label">Years in Crypto</div>
+      </div>
+    </div>
+  </section>
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  <!-- PROOF CTA -->
+  <div class="proof-cta">
+    <h2>Don't trust. Verify.</h2>
+    <p>All metrics auto-collected from live systems. No manual updates. No inflated numbers.</p>
+    <a href="/proof/" class="btn btn-primary">View Proof Ledger →</a>
+  </div>
 
-        // Nav scroll effect
-        window.addEventListener('scroll', () => {
-            document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
-        });
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Research</h4>
+        <a href="https://t.me/FakeAirdropX" target="_blank">FakeAirdropX</a>
+        <a href="https://x.com/FAKE143_" target="_blank">@FAKE143_</a>
+      </div>
+      <div class="footer-col">
+        <h4>Infrastructure</h4>
+        <a href="https://pearl.fake143.xyz" target="_blank">Pearl Calculator</a>
+        <a href="/proof/">Proof Ledger</a>
+      </div>
+      <div class="footer-col">
+        <h4>Code</h4>
+        <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
+        <a href="https://github.com/FAKE143TR/fake143-site" target="_blank">Site Source</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2022–2026 FAKE143</span>
+      <span>Web3 Operator · Infrastructure · Automation</span>
+    </div>
+  </footer>
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>

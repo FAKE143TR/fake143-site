@@ -649,9 +649,29 @@
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+
+    .watermark {
+      position: fixed;
+      top: -20px;
+      right: -20px;
+      width: 300px;
+      height: auto;
+      opacity: 1;
+      pointer-events: none;
+      z-index: 0;
+      transform: rotate(15deg);
+    }
+
+    @media (max-width: 600px) {
+      .watermark {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <img src="watermark.png" class="watermark" alt="">
 
   <!-- NAV -->
   <nav>
@@ -938,6 +958,12 @@
         const target = document.querySelector(a.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    });
+
+    // Parallax watermark
+    window.addEventListener('scroll', () => {
+      const wm = document.querySelector('.watermark');
+      if (wm) wm.style.transform = `rotate(15deg) translateY(${window.scrollY * 0.08}px)`;
     });
   </script>
 </body>

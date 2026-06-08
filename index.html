@@ -73,7 +73,7 @@
       letter-spacing: -0.02em;
     }
 
-    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-logo img { width: 32px; height: 32px; border-radius: 4px; }
 
     .nav-links {
       display: flex;
@@ -650,37 +650,42 @@
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
 
+    /* Watermark Eagle */
     .watermark {
       position: fixed;
-      top: -20px;
-      right: -20px;
-      width: 300px;
-      height: auto;
-      opacity: 1;
+      bottom: -60px;
       pointer-events: none;
       z-index: 0;
+      opacity: 1;
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+    .watermark-right {
+      right: -20px;
       transform: rotate(15deg);
     }
-
+    .watermark img {
+      width: 300px;
+      height: auto;
+    }
+    @media (max-width: 900px) {
+      .watermark img { width: 200px; }
     @media (max-width: 600px) {
-      .watermark {
-        display: none;
-      }
+      .watermark { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <img src="watermark.png" class="watermark" alt="">
+  <!-- WATERMARK -->
+  <div class="watermark watermark-right">
+    <img src="/logo.png" alt="">
+  </div>
 
   <!-- NAV -->
   <nav>
     <a href="/" class="nav-logo">
-      <svg viewBox="0 0 32 32" fill="none">
-        <path d="M16 2L4 10v12l12 8 12-8V10L16 2z" stroke="currentColor" stroke-width="2" fill="none"/>
-        <path d="M16 6l-8 5.3v10.7L16 27l8-5.3V11.3L16 6z" fill="currentColor" opacity="0.15"/>
-        <path d="M12 14l4-3 4 3-4 3-4-3z" fill="currentColor"/>
-      </svg>
+      <img src="/logo.png" alt="FAKE143" class="logo-img">
       FAKE143
     </a>
     <div class="nav-links">
@@ -951,6 +956,20 @@
       document.querySelector('nav').classList.toggle('scrolled', window.scrollY > 50);
     });
 
+    // Watermark parallax
+    const wmRight = document.querySelector('.watermark-right');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          wmRight.style.transform = `rotate(15deg) translateY(${y * -0.08}px)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
@@ -958,12 +977,6 @@
         const target = document.querySelector(a.getAttribute('href'));
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-    });
-
-    // Parallax watermark
-    window.addEventListener('scroll', () => {
-      const wm = document.querySelector('.watermark');
-      if (wm) wm.style.transform = `rotate(15deg) translateY(${window.scrollY * 0.08}px)`;
     });
   </script>
 </body>

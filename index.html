@@ -102,6 +102,14 @@
       padding: 4px 10px;
       border-radius: 20px;
       border: 1px solid rgba(0,255,136,0.15);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .nav-status:hover {
+      background: rgba(0,255,136,0.1);
+      border-color: rgba(0,255,136,0.3);
     }
 
     .nav-status .pulse {
@@ -239,7 +247,7 @@
     .ticker-inner {
       display: flex;
       gap: 3rem;
-      animation: scroll 30s linear infinite;
+      animation: scroll 45s linear infinite;
       white-space: nowrap;
     }
 
@@ -531,6 +539,86 @@
       border-color: rgba(0,255,136,0.2);
     }
 
+    /* REPOS */
+    .repos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .repo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+      display: block;
+    }
+
+    .repo-card:hover {
+      border-color: var(--border-light);
+      transform: translateY(-1px);
+    }
+
+    .repo-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      font-family: var(--mono);
+      margin-bottom: 0.4rem;
+      color: var(--pink);
+    }
+
+    .repo-card p {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      line-height: 1.5;
+      margin-bottom: 0.75rem;
+    }
+
+    .repo-card .repo-meta {
+      display: flex;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .repo-card .repo-meta .lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .repo-card .repo-meta .lang-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    /* OPS LIVE CHECK */
+    .ops-card .live-url {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      padding: 2px 8px;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+
+    .ops-card .live-url.up {
+      color: var(--green);
+      background: rgba(0,255,136,0.05);
+    }
+
+    .ops-card .live-url.down {
+      color: var(--orange);
+      background: rgba(255,170,0,0.05);
+    }
+
     /* STATS */
     .stats-bar {
       display: grid;
@@ -670,6 +758,7 @@
     }
     @media (max-width: 900px) {
       .watermark img { width: 200px; }
+    }
     @media (max-width: 600px) {
       .watermark { display: none; }
     }
@@ -692,14 +781,15 @@
       <a href="#about">About</a>
       <a href="#operations">Operations</a>
       <a href="#projects">Projects</a>
+      <a href="#repos">Repos</a>
       <a href="/proof/">Proof</a>
       <a href="https://github.com/FAKE143TR" target="_blank">GitHub</a>
       <a href="https://x.com/FAKE143_" target="_blank">Twitter</a>
     </div>
-    <div class="nav-status">
+    <a href="/proof/" class="nav-status">
       <span class="pulse"></span>
       OPERATIONAL
-    </div>
+    </a>
   </nav>
 
   <!-- HERO -->
@@ -728,11 +818,11 @@
       </div>
       <div class="ticker-item">
         <span class="label">TOOLS</span>
-        <span class="value">83</span>
+        <span class="value">84</span>
       </div>
       <div class="ticker-item">
         <span class="label">SKILLS</span>
-        <span class="value">189</span>
+        <span class="value">195</span>
       </div>
       <div class="ticker-item">
         <span class="label">NETWORKS</span>
@@ -753,11 +843,11 @@
       </div>
       <div class="ticker-item">
         <span class="label">TOOLS</span>
-        <span class="value">83</span>
+        <span class="value">84</span>
       </div>
       <div class="ticker-item">
         <span class="label">SKILLS</span>
-        <span class="value">189</span>
+        <span class="value">195</span>
       </div>
       <div class="ticker-item">
         <span class="label">NETWORKS</span>
@@ -832,6 +922,17 @@
       </div>
       <div class="ops-card">
         <div class="status live"><span class="dot"></span> LIVE</div>
+        <h3>Memecoin Scanner</h3>
+        <p>Base + Solana momentum scanner. GeckoTerminal API. Gate-based research pipeline — evidence collected before any model built.</p>
+        <div class="meta">
+          <span>1,372 signals</span>
+          <span>71.8% 5m WR</span>
+          <span>Gate 1000 in progress</span>
+        </div>
+        <a href="/proof/" style="font-size:0.8rem">View on Proof Ledger →</a>
+      </div>
+      <div class="ops-card">
+        <div class="status live"><span class="dot"></span> LIVE</div>
         <h3>Node Portfolio</h3>
         <p>Validators and testnet nodes across multiple chains. Active monitoring, auto-restart, performance tracking.</p>
         <div class="meta">
@@ -900,11 +1001,11 @@
   <section style="padding-top:0">
     <div class="stats-bar">
       <div class="stat">
-        <div class="number">83</div>
+        <div class="number">84</div>
         <div class="label">Registered Tools</div>
       </div>
       <div class="stat">
-        <div class="number">189</div>
+        <div class="number">195</div>
         <div class="label">Skill Modules</div>
       </div>
       <div class="stat">
@@ -915,6 +1016,19 @@
         <div class="number">5</div>
         <div class="label">Years in Crypto</div>
       </div>
+    </div>
+  </section>
+
+  <!-- GITHUB REPOS (LIVE) -->
+  <section id="repos">
+    <div class="section-label">Source Code</div>
+    <h2 class="section-title">Public Repos</h2>
+    <p class="section-desc">Live from GitHub. Proof of work, not proof of claims.</p>
+    <div class="repos-grid" id="repos-grid">
+      <div style="color:var(--muted);font-size:0.85rem">Loading from GitHub API...</div>
+    </div>
+    <div style="margin-top:1.5rem">
+      <a href="https://github.com/FAKE143TR" target="_blank" class="btn btn-ghost" style="font-size:0.8rem">View All on GitHub →</a>
     </div>
   </section>
 
@@ -978,6 +1092,65 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    // GitHub repos live fetch
+    async function loadRepos() {
+      const grid = document.getElementById('repos-grid');
+      try {
+        const resp = await fetch('https://api.github.com/users/FAKE143TR/repos?sort=pushed&per_page=12');
+        if (!resp.ok) throw new Error('GitHub API error');
+        const repos = await resp.json();
+        grid.innerHTML = '';
+        repos.forEach(repo => {
+          const card = document.createElement('a');
+          card.className = 'repo-card';
+          card.href = repo.html_url;
+          card.target = '_blank';
+          const desc = repo.description || 'No description';
+          const lang = repo.language || '';
+          const langColors = { 'Python': '#3572A5', 'JavaScript': '#f1e05a', 'HTML': '#e34c26', 'CSS': '#563d7c', 'Shell': '#89e051', 'TypeScript': '#3178c6' };
+          const langColor = langColors[lang] || '#888';
+          const updated = new Date(repo.pushed_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+          card.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${desc}</p>
+            <div class="repo-meta">
+              ${lang ? `<span class="lang"><span class="lang-dot" style="background:${langColor}"></span>${lang}</span>` : ''}
+              <span>Updated ${updated}</span>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      } catch (e) {
+        grid.innerHTML = '<div style="color:var(--muted);font-size:0.85rem">Unable to load repos. <a href="https://github.com/FAKE143TR" target="_blank" style="color:var(--pink)">View on GitHub →</a></div>';
+      }
+    }
+    loadRepos();
+
+    // Live uptime checks for ops cards
+    async function checkUptime() {
+      const checks = [
+        { url: 'https://pearl.fake143.xyz', selector: '.ops-card:nth-child(1)' },
+        { url: 'https://fake143.xyz/proof/proof-data.json', selector: '.ops-card:nth-child(5)' }
+      ];
+      for (const check of checks) {
+        try {
+          const controller = new AbortController();
+          setTimeout(() => controller.abort(), 5000);
+          const resp = await fetch(check.url, { method: 'HEAD', mode: 'no-cors', signal: controller.signal });
+          const card = document.querySelector(check.selector);
+          if (card) {
+            const badge = document.createElement('span');
+            badge.className = 'live-url up';
+            badge.textContent = '● UP';
+            card.querySelector('.meta').appendChild(badge);
+          }
+        } catch (e) {
+          // silently skip — no badge added
+        }
+      }
+    }
+    checkUptime();
   </script>
 </body>
 </html>

@@ -1,10 +1,10 @@
 {
-  "updated": "2026-06-05 08:40 UTC+8",
-  "updated_iso": "2026-06-05T08:40:27.135331+08:00",
+  "updated": "2026-06-11 06:02 UTC+8",
+  "updated_iso": "2026-06-11T06:02:06.243786+08:00",
   "metrics": {
     "github": {
       "repos": 9,
-      "total_commits": 396,
+      "total_commits": 408,
       "repo_names": [
         "04-zkapp-browser-ui",
         "bad-rabbits-mint",
@@ -19,8 +19,8 @@
     },
     "capabilities": {
       "tools": 84,
-      "skills": 189,
-      "scripts": 52,
+      "skills": 195,
+      "scripts": 91,
       "note": "capability, not usage"
     },
     "operations": {
@@ -28,8 +28,8 @@
       "cronjobs": 1
     },
     "usage": {
-      "nginx_visitors": 561,
-      "nginx_requests": 71911,
+      "nginx_visitors": 477,
+      "nginx_requests": 2523,
       "trading_signals": 0
     },
     "sites": {
@@ -41,17 +41,17 @@
     {
       "name": "fake143.xyz",
       "level": "L2",
-      "evidence": "GitHub repo, nginx live, 561 visitors",
+      "evidence": "GitHub repo, nginx live, 477 visitors",
       "notes": "Analytics not yet installed. Visitor count from server logs.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
       "link": "https://fake143.xyz"
     },
     {
       "name": "Pearl Calculator",
       "level": "L3",
-      "evidence": "561 unique visitors, live pool data",
+      "evidence": "477 unique visitors, live pool data",
       "notes": "Public usage detected. Small but real. No testimonials yet.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
       "link": "https://pearl.fake143.xyz"
     },
     {
@@ -59,15 +59,15 @@
       "level": "L2",
       "evidence": "Paper engine running, 0 signals collected",
       "notes": "Forward test collecting data. Live readiness: NOT YET.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
       "link": null
     },
     {
       "name": "Infrastructure Agent",
       "level": "L2",
-      "evidence": "84 tools, 189 skills, 24/7 running",
+      "evidence": "84 tools, 195 skills, 24/7 running",
       "notes": "Internal usage only. External usage: not yet.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
       "link": null
     },
     {
@@ -75,7 +75,15 @@
       "level": "L3",
       "evidence": "Recurring automation executed hourly",
       "notes": "Real operations running. Account-specific. No external validation.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
+      "link": null
+    },
+    {
+      "name": "Memecoin Scanner",
+      "level": "L2",
+      "evidence": "1,372 accepted signals, 71.8% 5m WR, gate-based pipeline",
+      "notes": "Research phase. No scoring model yet. Gate 1000 in progress (4h outcomes maturing).",
+      "verified": "2026-06-11",
       "link": null
     },
     {
@@ -83,7 +91,7 @@
       "level": "L2",
       "evidence": "V4.3 framework, 0 entries, freshness scoring",
       "notes": "Reuse rate: not measured. Error resolution speed: not measured.",
-      "verified": "2026-06-05",
+      "verified": "2026-06-11",
       "link": null
     }
   ],

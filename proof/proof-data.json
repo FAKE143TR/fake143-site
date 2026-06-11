@@ -33,18 +33,18 @@
       "trading_signals": 0
     },
     "sites": {
-      "fake143_xyz": true,
+      "fake143.com": true,
       "pearl_fake143_xyz": true
     }
   },
   "projects": [
     {
-      "name": "fake143.xyz",
+      "name": "fake143.com",
       "level": "L2",
       "evidence": "GitHub repo, nginx live, 477 visitors",
       "notes": "Analytics not yet installed. Visitor count from server logs.",
       "verified": "2026-06-11",
-      "link": "https://fake143.xyz"
+      "link": "https://fake143.com"
     },
     {
       "name": "Pearl Calculator",

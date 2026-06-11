@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fake143.xyz/sitemap.xml
+Sitemap: https://fake143.com/sitemap.xml
